@@ -20,5 +20,9 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Run Scraper
-        run: python scraper.py
+      - name: Run All Bots (The Terminator Mode)
+        run: |
+          for file in *.py; do
+            echo "🚀 Running $file..."
+            python "$file"
+          done
