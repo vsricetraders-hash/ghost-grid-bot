@@ -1,0 +1,21 @@
+name: Ghost Grid Auto Update
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Iska matlab: Har 6 ghante mein apne aap chalega
+  workflow_dispatch: # Isse tum haath se bhi chala sakte ho
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: ambassadors/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Run Scraper
+        run: python scraper.py
