@@ -5,7 +5,7 @@ import random
 import time
 
 # --- TERA FIREBASE LINK ---
-FIREBASE_URL = "https://ghost-grid-db-default-rtdb.firebaseio.com/.json"
+FIREBASE_URL = "https://ghost-grid-db-default-rtdb.firebaseio.com/amazon_data.json"
 
 def terminator_scraper(keyword):
     # Fake User-Agents taaki Amazon block na kare
